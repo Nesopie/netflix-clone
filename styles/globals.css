@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-600;
+    }
+
+    header {
+        @apply fixed top-0 z-50 flex w-full justify-between px-4 py-4 transition-all lg:px-10 lg:py-6;
+    }
+}
+
+@layer components {
+    .header-link {
+        @apply cursor-pointer text-sm font-light text-[#e5e5e5] transition duration-[0.4s]
+        hover:text-[#b3b3b3]; 
+    }
+
+    .banner-button {
+        @apply flex items-center gap-x-2 px-5 py-1.5 text-sm transition hover:opacity-75
+        md:px-8 md:py-2.5 md:text-xl font-bold rounded;
+    }
+
+    .input {
+        @apply w-full rounded bg-[#333] px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545]
+    }
+
+    .modal-button {
+        @apply flex h-11 w-11 justify-center items-center rounded-full border-2 border-[gray] bg-[#2a2a2a]/60
+      hover:border-white hover:bg-white/10
+    }
+
+    .plan-box {
+        @apply relative mx-1.5 flex h-20 w-[calc(100%/3)] cursor-default items-center justify-center
+        rounded-sm bg-[#e50914] font-semibold shadow after:absolute after:top-full after:left-1/2
+        after:-translate-x-1/2 after:border-8 after:block after:border-transparent after:border-t-[#e50914]
+        md:h-32 lg:mx-8 md:mb-5
+    }
+
+    .table-row-style {
+        @apply !flex flex-wrap items-center font-medium flex-col md:flex-row md:flex-nowrap py-5;
+    }
+
+    .table-data-title {
+        @apply w-full text-center md:w-[40%];
+    }
+
+    .table-row-style > div {
+        @apply w-full flex md:w-[60%];
+    }
+
+    .table-data {
+        @apply w-[calc(100%/3)] text-center mx-1.5 md:basis-[100%/3];
+    }
+
+    .membership-link {
+        @apply cursor-pointer text-blue-500 hover:underline
+    }
+
+    .menu {
+        @apply md:hidden mt-0 absolute ;
+    }
+
+    .menu .MuiList-root {
+        @apply p-0 rounded-none;
+    }
+
+    .menu .MuiPaper-root {
+        @apply rounded-none border border-[gray] border-t-2 border-t-white
+        ;
+    }
+
+    .menu .MuiMenuItem-root {
+        @apply !block bg-black text-white w-60 !text-center font-light py-3.5 
+        justify-center hover:bg-[#141414] hover:text-[white]/60 text-sm; 
+    }
+}
